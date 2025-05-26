@@ -1,0 +1,246 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "DP-.DD.-.MM.-.YY.-.#####",
+ "creation": "2024-05-30 13:52:03.529412",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "column_break_bqnle",
+  "mill_on_time",
+  "column_break_cz6iu",
+  "mill_off_time",
+  "column_break_nhefu",
+  "net_hours",
+  "amended_from",
+  "column_break_x4utf",
+  "warehouse",
+  "stock_entry",
+  "section_break_qtf1y",
+  "raw_material_items",
+  "section_break_yxqco",
+  "total_raw_material_qty",
+  "column_break_01zms",
+  "total_raw_material_wastage_weight",
+  "column_break_ftin1",
+  "total_raw_material_net_weight",
+  "column_break_bqvvr",
+  "total_raw_material_amount",
+  "section_break_9uzky",
+  "finish_items",
+  "section_break_c53us",
+  "total_finish_qty",
+  "column_break_nw7zs",
+  "total_finish_ovals",
+  "column_break_96udb",
+  "total_finish_end_cutts",
+  "column_break_ceula",
+  "total_finish_net_qty"
+ ],
+ "fields": [
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "default": "Now",
+   "fieldname": "mill_on_time",
+   "fieldtype": "Time",
+   "label": "Mill On Time"
+  },
+  {
+   "default": "Now",
+   "fieldname": "mill_off_time",
+   "fieldtype": "Time",
+   "label": "Mill Off Time"
+  },
+  {
+   "fieldname": "net_hours",
+   "fieldtype": "Float",
+   "label": "Net Hours",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Daily Production",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_bqnle",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_cz6iu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_nhefu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "warehouse",
+   "fieldtype": "Link",
+   "label": "Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "column_break_x4utf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "stock_entry",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Stock Entry"
+  },
+  {
+   "fieldname": "raw_material_items",
+   "fieldtype": "Table",
+   "label": "Raw Material Items",
+   "options": "Raw Material Items"
+  },
+  {
+   "default": "0",
+   "fieldname": "total_raw_material_qty",
+   "fieldtype": "Float",
+   "label": "Total Qty",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "total_raw_material_wastage_weight",
+   "fieldtype": "Float",
+   "label": "Total Wastage",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "total_raw_material_net_weight",
+   "fieldtype": "Float",
+   "label": "Total Net Weight",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "total_raw_material_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_yxqco",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_01zms",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ftin1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_bqvvr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_9uzky",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "finish_items",
+   "fieldtype": "Table",
+   "label": "Finish Items",
+   "options": "Finish Items"
+  },
+  {
+   "fieldname": "section_break_c53us",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "total_finish_qty",
+   "fieldtype": "Float",
+   "label": "Total Qty",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "total_finish_ovals",
+   "fieldtype": "Float",
+   "label": "Total Ovals",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "total_finish_end_cutts",
+   "fieldtype": "Float",
+   "label": "Total End Cutts",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "total_finish_net_qty",
+   "fieldtype": "Float",
+   "label": "Total Net Qty",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_nw7zs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_96udb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ceula",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_qtf1y",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Stock Entry",
+   "link_fieldname": "ref_no"
+  }
+ ],
+ "modified": "2024-06-07 17:31:08.561633",
+ "modified_by": "Administrator",
+ "module": "Rice Production",
+ "name": "Daily Production",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

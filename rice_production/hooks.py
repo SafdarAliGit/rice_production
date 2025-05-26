@@ -213,3 +213,5 @@ app_license = "mit"
 # auth_hooks = [
 # 	"rice_production.auth.validate"
 # ]
+
+required_apps = ["erpnext"]
