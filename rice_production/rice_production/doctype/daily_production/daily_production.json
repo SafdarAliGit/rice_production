@@ -38,7 +38,17 @@
   "column_break_96udb",
   "total_finish_end_cutts",
   "column_break_ceula",
-  "total_finish_net_qty"
+  "total_finish_net_qty",
+  "section_break_wxrwa",
+  "sami_finished_item",
+  "section_break_q1cop",
+  "total_qty",
+  "column_break_tocyk",
+  "total_amount",
+  "section_break_5nx3k",
+  "overhead_process_charges",
+  "section_break_nh1gf",
+  "total_charges"
  ],
  "fields": [
   {
@@ -210,6 +220,59 @@
   {
    "fieldname": "section_break_qtf1y",
    "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_wxrwa",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "sami_finished_item",
+   "fieldtype": "Table",
+   "label": "Sami Finished Item",
+   "options": "Sami Finished Item"
+  },
+  {
+   "fieldname": "section_break_q1cop",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "total_qty",
+   "fieldtype": "Float",
+   "label": "Total Qty",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_tocyk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "total_amount",
+   "fieldtype": "Float",
+   "label": "Total Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_5nx3k",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_nh1gf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "total_charges",
+   "fieldtype": "Currency",
+   "label": "Total Charges",
+   "read_only": 1
+  },
+  {
+   "fieldname": "overhead_process_charges",
+   "fieldtype": "Table",
+   "label": "Overhead Process Charges",
+   "options": "Overhead Process Charges"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -217,10 +280,10 @@
  "links": [
   {
    "link_doctype": "Stock Entry",
-   "link_fieldname": "ref_no"
+   "link_fieldname": "custom_ref_no"
   }
  ],
- "modified": "2024-06-07 17:31:08.561633",
+ "modified": "2025-05-28 19:43:15.072272",
  "modified_by": "Administrator",
  "module": "Rice Production",
  "name": "Daily Production",

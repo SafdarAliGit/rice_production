@@ -54,6 +54,30 @@ frappe.ui.form.on("Finish Items", {
     }
 });
 
+frappe.ui.form.on("Sami Finished Item", {
+    qty: function (frm, cdt, cdn) {
+        calculate_net_qty_amount(frm, cdt, cdn);
+    },
+    m_rate: function (frm, cdt, cdn) {
+        calculate_net_qty_amount(frm, cdt, cdn);
+    }
+});
+
+frappe.ui.form.on("Overhead Process Charges", {
+    amount: function (frm, cdt, cdn) {
+        calculate_total_charges(frm, cdt, cdn);
+    }
+});
+
+function calculate_total_charges(frm) {
+    let total = 0;
+
+    (frm.doc.overhead_process_charges || []).forEach(item => {
+        total += flt(item.amount);
+    });
+
+    frm.set_value("total_charges", total);
+}
 
 function calculate_time_difference(frm) {
     if (frm.doc.mill_on_time && frm.doc.mill_off_time) {
@@ -129,5 +153,18 @@ function calculate_net_qty(frm, cdt, cdn) {
     var net_qty = flt(d.qty) - (flt(d.ovals || 0) + flt(d.end_cutts || 0));
     frappe.model.set_value(d.doctype, d.name, "net_qty", net_qty || 0);
     frappe.model.set_value(d.doctype, d.name, "amount", net_qty * flt(d.rate) || 0);
+}
+
+function calculate_net_qty_amount(frm) {
+    let total_amount = 0;
+    let total_qty = 0;
+
+    (frm.doc.sami_finished_item || []).forEach(item => {
+        total_amount += flt(item.amount);
+        total_qty += flt(item.qty);
+    });
+
+    frm.set_value("total_amount", total_amount);
+    frm.set_value("total_qty", total_qty);
 }
 
