@@ -16,7 +16,29 @@
   "rate",
   "amount",
   "batch",
-  "batch_qty"
+  "batch_qty",
+  "lot_quality_section",
+  "crop",
+  "column_break_xvv8f",
+  "average_grain_length",
+  "column_break_fxsyy",
+  "moisture",
+  "column_break_utvvw",
+  "broken",
+  "column_break_yrime",
+  "sortex",
+  "column_break_43tdx",
+  "yellow_damage_grain",
+  "section_break_ufnoh",
+  "color",
+  "column_break_5fbpc",
+  "insects_live_dead",
+  "column_break_oyqpe",
+  "pesticide",
+  "column_break_0kwun",
+  "foreign_matter",
+  "column_break_8aj2j",
+  "origin"
  ],
  "fields": [
   {
@@ -84,6 +106,7 @@
   {
    "fieldname": "batch",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Batch",
    "options": "Batch"
   },
@@ -92,14 +115,159 @@
    "fetch_from": "batch.batch_qty",
    "fieldname": "batch_qty",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Batch Qty",
+   "read_only": 1
+  },
+  {
+   "fieldname": "lot_quality_section",
+   "fieldtype": "Section Break",
+   "label": "Lot Quality"
+  },
+  {
+   "default": "None",
+   "fetch_from": "batch.custom_crop",
+   "fieldname": "crop",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Crop",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_xvv8f",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fetch_from": "batch.custom_average_grain_length",
+   "fieldname": "average_grain_length",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Average Grain Length ",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_fxsyy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fetch_from": "batch.custom_moisture",
+   "fieldname": "moisture",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Moisture",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_utvvw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fetch_from": "batch.custom_broken",
+   "fieldname": "broken",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Broken",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_yrime",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fetch_from": "batch.custom_sortex",
+   "fieldname": "sortex",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Sortex",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_43tdx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fetch_from": "batch.custom_yellow_damage_grain",
+   "fieldname": "yellow_damage_grain",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Yellow & Damage Grain",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_ufnoh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "None",
+   "fetch_from": "batch.custom_color",
+   "fieldname": "color",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Color",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_5fbpc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "None",
+   "fetch_from": "batch.custom_insects_live_dead",
+   "fieldname": "insects_live_dead",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Insects / Live-Dead",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_oyqpe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "None",
+   "fetch_from": "batch.custom_pesticide",
+   "fieldname": "pesticide",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Pesticide",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_0kwun",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "None",
+   "fetch_from": "batch.custom_foreign_matter",
+   "fieldname": "foreign_matter",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Foreign Matter",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_8aj2j",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "None",
+   "fetch_from": "batch.custom_origin",
+   "fieldname": "origin",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Origin",
    "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-06-22 16:59:36.448522",
+ "modified": "2025-05-29 16:51:52.245015",
  "modified_by": "Administrator",
  "module": "Rice Production",
  "name": "Raw Material Items",
