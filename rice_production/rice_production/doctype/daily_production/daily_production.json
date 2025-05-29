@@ -30,16 +30,6 @@
   "column_break_bqvvr",
   "total_raw_material_amount",
   "section_break_9uzky",
-  "finish_items",
-  "section_break_c53us",
-  "total_finish_qty",
-  "column_break_nw7zs",
-  "total_finish_ovals",
-  "column_break_96udb",
-  "total_finish_end_cutts",
-  "column_break_ceula",
-  "total_finish_net_qty",
-  "section_break_wxrwa",
   "sami_finished_item",
   "section_break_q1cop",
   "total_qty",
@@ -48,7 +38,43 @@
   "section_break_5nx3k",
   "overhead_process_charges",
   "section_break_nh1gf",
-  "total_charges"
+  "total_charges",
+  "finish_items_detail",
+  "item_code",
+  "column_break_aofne",
+  "item_name",
+  "column_break_m5kou",
+  "batch",
+  "column_break_h5pwx",
+  "qty",
+  "section_break_ol7h8",
+  "uom",
+  "column_break_ksu5z",
+  "rate",
+  "column_break_khqjk",
+  "amount",
+  "section_break_zps0m",
+  "crop",
+  "column_break_niutp",
+  "average_grain_length",
+  "column_break_f1ntk",
+  "moisture",
+  "column_break_qtuwv",
+  "broken",
+  "column_break_fxqo9",
+  "sortex",
+  "column_break_s4dcm",
+  "yellow_damage_grain",
+  "section_break_ml058",
+  "color",
+  "column_break_o5o6f",
+  "insects_live_dead",
+  "column_break_wvbgp",
+  "pesticide",
+  "column_break_5ckii",
+  "foreign_matter",
+  "column_break_98itp",
+  "origin"
  ],
  "fields": [
   {
@@ -168,61 +194,7 @@
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "finish_items",
-   "fieldtype": "Table",
-   "label": "Finish Items",
-   "options": "Finish Items"
-  },
-  {
-   "fieldname": "section_break_c53us",
-   "fieldtype": "Section Break"
-  },
-  {
-   "default": "0",
-   "fieldname": "total_finish_qty",
-   "fieldtype": "Float",
-   "label": "Total Qty",
-   "read_only": 1
-  },
-  {
-   "default": "0",
-   "fieldname": "total_finish_ovals",
-   "fieldtype": "Float",
-   "label": "Total Ovals",
-   "read_only": 1
-  },
-  {
-   "default": "0",
-   "fieldname": "total_finish_end_cutts",
-   "fieldtype": "Float",
-   "label": "Total End Cutts",
-   "read_only": 1
-  },
-  {
-   "default": "0",
-   "fieldname": "total_finish_net_qty",
-   "fieldtype": "Float",
-   "label": "Total Net Qty",
-   "read_only": 1
-  },
-  {
-   "fieldname": "column_break_nw7zs",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "column_break_96udb",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "column_break_ceula",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "section_break_qtf1y",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "section_break_wxrwa",
    "fieldtype": "Section Break"
   },
   {
@@ -273,6 +245,207 @@
    "fieldtype": "Table",
    "label": "Overhead Process Charges",
    "options": "Overhead Process Charges"
+  },
+  {
+   "default": "None",
+   "fetch_from": "batch.custom_crop",
+   "fieldname": "crop",
+   "fieldtype": "Data",
+   "label": "Crop",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fetch_from": "batch.custom_average_grain_length",
+   "fieldname": "average_grain_length",
+   "fieldtype": "Float",
+   "label": "Average Grain Length",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fetch_from": "batch.custom_moisture",
+   "fieldname": "moisture",
+   "fieldtype": "Percent",
+   "label": "Moisture",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fetch_from": "batch.custom_broken",
+   "fieldname": "broken",
+   "fieldtype": "Percent",
+   "label": "Broken",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fetch_from": "batch.custom_sortex",
+   "fieldname": "sortex",
+   "fieldtype": "Percent",
+   "label": "Sortex",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fetch_from": "batch.custom_yellow_damage_grain",
+   "fieldname": "yellow_damage_grain",
+   "fieldtype": "Percent",
+   "label": "Yellow & Damage Grain",
+   "read_only": 1
+  },
+  {
+   "default": "None",
+   "fetch_from": "batch.custom_color",
+   "fieldname": "color",
+   "fieldtype": "Data",
+   "label": "Color",
+   "read_only": 1
+  },
+  {
+   "default": "None",
+   "fetch_from": "batch.custom_insects_live_dead",
+   "fieldname": "insects_live_dead",
+   "fieldtype": "Data",
+   "label": "Insects / Live-Dead",
+   "read_only": 1
+  },
+  {
+   "default": "None",
+   "fetch_from": "batch.custom_pesticide",
+   "fieldname": "pesticide",
+   "fieldtype": "Data",
+   "label": "Pesticide",
+   "read_only": 1
+  },
+  {
+   "default": "None",
+   "fetch_from": "batch.custom_foreign_matter",
+   "fieldname": "foreign_matter",
+   "fieldtype": "Data",
+   "label": "Foreign Matter",
+   "read_only": 1
+  },
+  {
+   "default": "None",
+   "fetch_from": "batch.custom_origin",
+   "fieldname": "origin",
+   "fieldtype": "Data",
+   "label": "Origin",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_zps0m",
+   "fieldtype": "Section Break",
+   "label": "Batch Quality Detail "
+  },
+  {
+   "fieldname": "column_break_o5o6f",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_wvbgp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_5ckii",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_98itp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "finish_items_detail",
+   "fieldtype": "Section Break",
+   "label": "Finish Items Detail"
+  },
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "label": "Item Code ",
+   "options": "Item"
+  },
+  {
+   "fetch_from": "item_code.item_name",
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "label": "Item Name"
+  },
+  {
+   "fieldname": "batch",
+   "fieldtype": "Link",
+   "label": "Batch",
+   "options": "Batch"
+  },
+  {
+   "fieldname": "qty",
+   "fieldtype": "Float",
+   "label": "Qty"
+  },
+  {
+   "fetch_from": "item_code.sales_uom",
+   "fieldname": "uom",
+   "fieldtype": "Data",
+   "label": "UOM"
+  },
+  {
+   "fieldname": "rate",
+   "fieldtype": "Currency",
+   "label": "Rate"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Amount"
+  },
+  {
+   "fieldname": "column_break_aofne",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_m5kou",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_h5pwx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_ol7h8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_ksu5z",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_khqjk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_niutp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_f1ntk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_qtuwv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_fxqo9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_s4dcm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_ml058",
+   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -283,7 +456,7 @@
    "link_fieldname": "custom_ref_no"
   }
  ],
- "modified": "2025-05-28 19:43:15.072272",
+ "modified": "2025-05-29 14:36:01.822531",
  "modified_by": "Administrator",
  "module": "Rice Production",
  "name": "Daily Production",
