@@ -167,13 +167,16 @@ function calculate_net_qty(frm, cdt, cdn) {
 function calculate_net_qty_amount(frm) {
     let total_amount = 0;
     let total_qty = 0;
+    let bags = 0;
 
     (frm.doc.sami_finished_item || []).forEach(item => {
         total_amount += flt(item.amount);
         total_qty += flt(item.qty);
+        bags += flt(item.bags);
     });
 
     frm.set_value("total_amount", total_amount);
     frm.set_value("total_qty", total_qty);
+    frm.set_value("total_bags", bags);
 }
 

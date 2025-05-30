@@ -34,6 +34,8 @@
   "section_break_q1cop",
   "total_qty",
   "column_break_tocyk",
+  "total_bags",
+  "column_break_yiwje",
   "total_amount",
   "section_break_5nx3k",
   "overhead_process_charges",
@@ -446,6 +448,17 @@
   {
    "fieldname": "section_break_ml058",
    "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "total_bags",
+   "fieldtype": "Float",
+   "label": "Total Bags",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_yiwje",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -456,7 +469,7 @@
    "link_fieldname": "custom_ref_no"
   }
  ],
- "modified": "2025-05-29 14:36:01.822531",
+ "modified": "2025-05-30 15:39:31.149818",
  "modified_by": "Administrator",
  "module": "Rice Production",
  "name": "Daily Production",
