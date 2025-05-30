@@ -9,6 +9,13 @@ frappe.ui.form.on('Daily Production', {
                 ]
             };
         });
+        frm.set_query('item_code', 'sami_finished_item', function (doc, cdt, cdn) {
+            return {
+                filters: [
+                    ["Item", "item_group", "=", "By Products"]
+                ]
+            };
+        });
         calculate_time_difference(frm);
     }, mill_on_time: function (frm) {
         calculate_time_difference(frm);
@@ -59,6 +66,8 @@ frappe.ui.form.on("Sami Finished Item", {
         calculate_net_qty_amount(frm, cdt, cdn);
     },
     m_rate: function (frm, cdt, cdn) {
+        var d = locals[cdt][cdn];
+        frappe.model.set_value(d.doctype, d.name, "amount", flt(d.qty) * flt(d.m_rate));
         calculate_net_qty_amount(frm, cdt, cdn);
     }
 });
