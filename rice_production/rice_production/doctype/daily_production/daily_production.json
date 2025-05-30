@@ -249,92 +249,59 @@
    "options": "Overhead Process Charges"
   },
   {
-   "default": "None",
-   "fetch_from": "batch.custom_crop",
    "fieldname": "crop",
    "fieldtype": "Data",
-   "label": "Crop",
-   "read_only": 1
+   "label": "Crop"
   },
   {
-   "default": "0",
-   "fetch_from": "batch.custom_average_grain_length",
    "fieldname": "average_grain_length",
    "fieldtype": "Float",
-   "label": "Average Grain Length",
-   "read_only": 1
+   "label": "Average Grain Length"
   },
   {
-   "default": "0",
-   "fetch_from": "batch.custom_moisture",
    "fieldname": "moisture",
    "fieldtype": "Percent",
-   "label": "Moisture",
-   "read_only": 1
+   "label": "Moisture"
   },
   {
-   "default": "0",
-   "fetch_from": "batch.custom_broken",
    "fieldname": "broken",
    "fieldtype": "Percent",
-   "label": "Broken",
-   "read_only": 1
+   "label": "Broken"
   },
   {
-   "default": "0",
-   "fetch_from": "batch.custom_sortex",
    "fieldname": "sortex",
    "fieldtype": "Percent",
-   "label": "Sortex",
-   "read_only": 1
+   "label": "Sortex"
   },
   {
-   "default": "0",
-   "fetch_from": "batch.custom_yellow_damage_grain",
    "fieldname": "yellow_damage_grain",
    "fieldtype": "Percent",
-   "label": "Yellow & Damage Grain",
-   "read_only": 1
+   "label": "Yellow & Damage Grain"
   },
   {
-   "default": "None",
-   "fetch_from": "batch.custom_color",
    "fieldname": "color",
    "fieldtype": "Data",
-   "label": "Color",
-   "read_only": 1
+   "label": "Color"
   },
   {
-   "default": "None",
-   "fetch_from": "batch.custom_insects_live_dead",
    "fieldname": "insects_live_dead",
    "fieldtype": "Data",
-   "label": "Insects / Live-Dead",
-   "read_only": 1
+   "label": "Insects / Live-Dead"
   },
   {
-   "default": "None",
-   "fetch_from": "batch.custom_pesticide",
    "fieldname": "pesticide",
    "fieldtype": "Data",
-   "label": "Pesticide",
-   "read_only": 1
+   "label": "Pesticide"
   },
   {
-   "default": "None",
-   "fetch_from": "batch.custom_foreign_matter",
    "fieldname": "foreign_matter",
    "fieldtype": "Data",
-   "label": "Foreign Matter",
-   "read_only": 1
+   "label": "Foreign Matter"
   },
   {
-   "default": "None",
-   "fetch_from": "batch.custom_origin",
    "fieldname": "origin",
    "fieldtype": "Data",
-   "label": "Origin",
-   "read_only": 1
+   "label": "Origin"
   },
   {
    "fieldname": "section_break_zps0m",
@@ -469,7 +436,7 @@
    "link_fieldname": "custom_ref_no"
   }
  ],
- "modified": "2025-05-30 15:39:31.149818",
+ "modified": "2025-05-30 15:51:04.104792",
  "modified_by": "Administrator",
  "module": "Rice Production",
  "name": "Daily Production",
