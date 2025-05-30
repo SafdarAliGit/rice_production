@@ -191,4 +191,5 @@ function finished_item_rate(frm) {
     let qty = frm.doc.qty || 1;
     let rate = total_amount / qty;
     frm.set_value("rate", rate);
+    frm.set_value("amount", rate * qty);
 }
