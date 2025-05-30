@@ -359,6 +359,7 @@
    "label": "UOM"
   },
   {
+   "description": "(Total Amount (RAW) - Total Amount (sami Finished) + Total Charges (overhead) ) / Qty(finish)",
    "fieldname": "rate",
    "fieldtype": "Currency",
    "label": "Rate"
@@ -436,7 +437,7 @@
    "link_fieldname": "custom_ref_no"
   }
  ],
- "modified": "2025-05-30 15:51:04.104792",
+ "modified": "2025-05-30 16:09:29.314654",
  "modified_by": "Administrator",
  "module": "Rice Production",
  "name": "Daily Production",

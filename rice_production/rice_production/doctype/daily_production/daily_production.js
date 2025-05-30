@@ -21,6 +21,9 @@ frappe.ui.form.on('Daily Production', {
         calculate_time_difference(frm);
     }, mill_off_time: function (frm) {
         calculate_time_difference(frm);
+    },
+    qty: function (frm) {
+        finished_item_rate(frm);
     }
 });
 
@@ -183,3 +186,9 @@ function calculate_net_qty_amount(frm) {
     frm.set_value("total_bags", bags);
 }
 
+function finished_item_rate(frm) {
+    let total_amount = flt(frm.doc.total_raw_material_amount || 0) - flt(frm.doc.total_amount || 0) + flt(frm.doc.total_charges || 0);
+    let qty = frm.doc.qty || 1;
+    let rate = total_amount / qty;
+    frm.set_value("rate", rate);
+}
