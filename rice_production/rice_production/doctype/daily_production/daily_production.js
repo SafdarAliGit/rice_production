@@ -69,6 +69,9 @@ frappe.ui.form.on("Sami Finished Item", {
         var d = locals[cdt][cdn];
         frappe.model.set_value(d.doctype, d.name, "amount", flt(d.qty) * flt(d.m_rate));
         calculate_net_qty_amount(frm, cdt, cdn);
+    },
+    bags: function (frm, cdt, cdn) {
+        calculate_net_qty_amount(frm, cdt, cdn);
     }
 });
 
